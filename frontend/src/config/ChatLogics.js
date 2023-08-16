@@ -45,3 +45,11 @@ export const getSender = (loggedUser, users) => {
 export const getSenderFull = (loggedUser, users) => {
   return users[0]._id === loggedUser._id ? users[1] : users[0];
 };
+
+export const getSenderStatus = (loggedUser, users) => {
+  return users[0]?._id === loggedUser?._id ? users[1].status : users[0].status;
+};
+
+export const getSenderId = (loggedUser, users) => {
+  return users[0]?._id === loggedUser?._id ? users[1]._id : users[0]._id;
+};
